@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/frontend/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6194,15 +6194,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dis
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/frontend/index.js":
+/*!*******************************!*\
+  !*** ./src/frontend/index.js ***!
+  \*******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ \"./node_modules/d3/index.js\");\n\nconst dataset = [Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300)];\nconsole.log(dataset);\nconst svg = d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"]('#viz').append('svg').attr('width', 400).attr('height', 400);\nsvg.selectAll('rect').data(dataset).enter().append('rect').attr('fill', 'steelblue').attr('width', d => d).attr('height', 40).attr('y', (d, i) => i * 50 + 10).attr('x', 10).on('mouseover', (d, i, nodes) => d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"](nodes[i]).style('fill', 'orange')).on('mouseout', (d, i, nodes) => d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"](nodes[i]).style('fill', 'steelblue'));\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ \"./node_modules/d3/index.js\");\n\nconst dataset = [Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300)];\nconsole.log(dataset);\nconst svg = d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"]('#viz').append('svg').attr('width', 400).attr('height', 400);\nsvg.selectAll('rect').data(dataset).enter().append('rect').attr('fill', 'steelblue').attr('width', d => d).attr('height', 40).attr('y', (d, i) => i * 50 + 10).attr('x', 10).on('mouseover', (d, i, nodes) => d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"](nodes[i]).style('fill', 'orange')).on('mouseout', (d, i, nodes) => d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"](nodes[i]).style('fill', 'steelblue'));\n\n//# sourceURL=webpack:///./src/frontend/index.js?");
 
 /***/ })
 
