@@ -6,3 +6,7 @@ body {
 .title {
   margin-top: 0;
 }
+
+.homepage-link {
+  display: block;
+}

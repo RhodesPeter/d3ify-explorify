@@ -14,6 +14,10 @@
       <p>#{message}</p>
       <p class="js-data"></p>
 
+    if links
+      each link in links
+        <a class="homepage-link" href="#{link.link}">#{link.text}</a>
+
     <div id="viz">
        <!-- Content created by D3 -->
     </div>

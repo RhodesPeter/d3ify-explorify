@@ -6194,6 +6194,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dis
 
 /***/ }),
 
+/***/ "./src/frontend/basicExample.js":
+/*!**************************************!*\
+  !*** ./src/frontend/basicExample.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const basicExample = d3 => {\n  const dataset = [Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300)];\n  const userDataView = d3.select('.js-data');\n  userDataView.text(`Data: [${dataset.join(', ')}]`);\n  const svg = d3.select('#viz').append('svg').attr('width', 400).attr('height', 400);\n  svg.selectAll('rect').data(dataset).enter().append('rect').attr('fill', 'steelblue').attr('width', d => d).attr('height', 40).attr('y', (d, i) => i * 50 + 10).attr('x', 0).on('mouseover', (d, i, nodes) => d3.select(nodes[i]).style('fill', 'orange')).on('mouseout', (d, i, nodes) => d3.select(nodes[i]).style('fill', 'steelblue'));\n};\n\nmodule.exports = basicExample;\n\n//# sourceURL=webpack:///./src/frontend/basicExample.js?");
+
+/***/ }),
+
 /***/ "./src/frontend/index.js":
 /*!*******************************!*\
   !*** ./src/frontend/index.js ***!
@@ -6202,7 +6213,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dis
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ \"./node_modules/d3/index.js\");\n // JS for basic-example template\n\nif (window.location.pathname === '/basic-example') {\n  const dataset = [Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300), Math.round(Math.random() * 300)];\n  const userDataView = d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"]('.js-data');\n  userDataView.text(`Data: [${dataset.join(', ')}]`);\n  const svg = d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"]('#viz').append('svg').attr('width', 400).attr('height', 400);\n  svg.selectAll('rect').data(dataset).enter().append('rect').attr('fill', 'steelblue').attr('width', d => d).attr('height', 40).attr('y', (d, i) => i * 50 + 10).attr('x', 0).on('mouseover', (d, i, nodes) => d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"](nodes[i]).style('fill', 'orange')).on('mouseout', (d, i, nodes) => d3__WEBPACK_IMPORTED_MODULE_0__[\"select\"](nodes[i]).style('fill', 'steelblue'));\n}\n\n//# sourceURL=webpack:///./src/frontend/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ \"./node_modules/d3/index.js\");\n/* harmony import */ var _basicExample__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./basicExample */ \"./src/frontend/basicExample.js\");\n/* harmony import */ var _basicExample__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_basicExample__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst {\n  pathname\n} = window.location;\n\nif (pathname === '/basic-example') {\n  _basicExample__WEBPACK_IMPORTED_MODULE_1___default()(d3__WEBPACK_IMPORTED_MODULE_0__);\n}\n\n//# sourceURL=webpack:///./src/frontend/index.js?");
 
 /***/ })
 
