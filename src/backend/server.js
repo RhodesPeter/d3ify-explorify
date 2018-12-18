@@ -8,6 +8,9 @@ const port = 3000;
 // Initialize routes
 routes(app);
 
+// define 'Pug' as the templating engine
+app.set('view engine', 'pug');
+
 // Serve all files in the 'dist' folder
 app.use('/', express.static(path.join(__dirname, '/../../dist')));
 

@@ -1,8 +1,15 @@
-const path = require('path');
-
 const routes = (app) => {
   app.get('/', (req, res) => {
-    res.sendFile(path.join(`${__dirname}/../../dist/index.html`));
+    res.render('index', {
+      title: 'Homepage',
+    });
+  });
+
+  app.get('/basic-example', (req, res) => {
+    res.render('index', {
+      title: 'Basic Example',
+      message: 'Bar chart made from an array on numbers',
+    });
   });
 };
 
