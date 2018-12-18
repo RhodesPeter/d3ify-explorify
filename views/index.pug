@@ -8,18 +8,21 @@
     <link rel="stylesheet" type="text/css" href="./main.css">
   </head>
   <body>
+    if breadcrumb
+      <a class="breadcrumb" href="/">&larr; home</a>
+
     <h1 class="title">#{title}</h1>
 
     if message
       <p>#{message}</p>
-      <p class="js-data"></p>
+      <pre class="js-data"></pre>
 
     if links
       each link in links
         <a class="homepage-link" href="#{link.link}">#{link.text}</a>
 
-    <div id="viz">
-       <!-- Content created by D3 -->
+    <div id="viz" data-js=#{data}>
+      <!-- Content created by D3 -->
     </div>
 
     script(src='/main.js')

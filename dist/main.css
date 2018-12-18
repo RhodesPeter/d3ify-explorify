@@ -1,4 +1,5 @@
 body {
+  font-family: arial;
   margin: 0;
   padding: 24px;
 }
@@ -9,4 +10,11 @@ body {
 
 .homepage-link {
   display: block;
+}
+
+.breadcrumb {
+  color: grey;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
