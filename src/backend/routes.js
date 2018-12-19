@@ -1,6 +1,7 @@
 const connectToDB = require('./connectToDB');
 const formatVerifiedData = require('./utils/formatVerifiedData');
 const formatCreatedDateData = require('./utils/formatCreatedDateData');
+const formatActivityData = require('./utils/formatActivityData');
 const pageContent = require('./pageContent');
 
 const routes = (app) => {
@@ -27,6 +28,15 @@ const routes = (app) => {
     connectToDB(databaseQuery, (dataFromDB) => {
       pageContent.basicPie.data = formatCreatedDateData(dataFromDB);
       res.render('examples', pageContent.basicPie);
+    });
+  });
+
+  app.get('/interactive-pie', (req, res) => {
+    const databaseQuery = 'SELECT country, created FROM school';
+
+    connectToDB(databaseQuery, (dataFromDB) => {
+      pageContent.interactivePie.data = formatActivityData(dataFromDB);
+      res.render('examples', pageContent.interactivePie);
     });
   });
 };
