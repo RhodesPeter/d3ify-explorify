@@ -12,13 +12,10 @@ const connectToDB = (databaseQuery, cb) => {
   const connection = mysql.createConnection(databaseDetails);
 
   connection.connect();
-
   connection.query(databaseQuery, (err, data) => {
     if (err) throw err;
-
     return cb(data);
   });
-
   connection.end();
 };
 

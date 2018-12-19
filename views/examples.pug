@@ -1,0 +1,11 @@
+extends index.pug
+
+block breadcrumbs
+    <a class="breadcrumb" href="/">&larr; home</a>
+
+block content
+    <pre class="js-data"></pre>
+
+    <div id="viz" data-js=#{data}>
+      <!-- Content created by D3 -->
+    </div>
