@@ -18,3 +18,11 @@ body {
   margin-bottom: 8px;
   text-decoration: none;
 }
+
+.year-controls {
+  margin: 16px 0 0 112px;
+}
+
+.button {
+  margin: 0 8px;
+}

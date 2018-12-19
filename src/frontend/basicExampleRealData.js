@@ -1,8 +1,4 @@
-const displayRawData = (d3, data) => {
-  const formattedData = JSON.stringify(data, undefined, 2);
-  const userDataView = d3.select('.js-data');
-  userDataView.text(`Data: ${formattedData}`);
-};
+import displayRawData from './displayRawData';
 
 const displaySVG = (d3, dataset, svgSize) => {
   const svg = d3.select('#viz')
@@ -45,4 +41,4 @@ const basicExampleRealData = (d3) => {
   displaySVG(d3, parsedData, svgSize);
 };
 
-module.exports = basicExampleRealData;
+export default basicExampleRealData;

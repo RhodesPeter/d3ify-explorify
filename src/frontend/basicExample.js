@@ -27,4 +27,4 @@ const basicExample = (d3) => {
     .on('mouseout', (d, i, nodes) => d3.select(nodes[i]).style('fill', 'steelblue'));
 };
 
-module.exports = basicExample;
+export default basicExample;

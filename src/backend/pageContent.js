@@ -21,6 +21,11 @@ const pageContent = {
   },
   interactivePie: {
     title: 'description here...',
+    controls: [
+      { text: 2016, class: 'button button--2016' },
+      { text: 2017, class: 'button button--2017' },
+      { text: 2018, class: 'button button--2018' },
+    ],
     data: null,
   },
 };

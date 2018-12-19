@@ -4,6 +4,7 @@
         "no-console": "off"
     },
     "globals": {
-        "window": true
+        "window": true,
+        "document": true
     }
 }
