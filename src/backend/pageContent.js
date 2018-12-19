@@ -20,11 +20,11 @@ const pageContent = {
     data: null,
   },
   interactivePie: {
-    title: 'description here...',
+    title: 'Number of signups per country as a percentage of total',
     controls: [
-      { text: 2016, class: 'button button--2016' },
-      { text: 2017, class: 'button button--2017' },
-      { text: 2018, class: 'button button--2018' },
+      { text: 2016, class: 'radio radio--2016', id: 'radio--2016' },
+      { text: 2017, class: 'radio radio--2017', id: 'radio--2017' },
+      { text: 2018, class: 'radio radio--2018', id: 'radio--2018' },
     ],
     data: null,
   },

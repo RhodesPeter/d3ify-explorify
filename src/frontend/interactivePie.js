@@ -73,8 +73,8 @@ const updateSVG = (d3, newDataset) => {
 };
 
 const attachListenersToButtons = (d3, dataset) => {
-  const buttons = [...document.querySelectorAll('.button')];
-  buttons.forEach(button => button.addEventListener('click', (e) => {
+  const radios = [...document.querySelectorAll('.radio')];
+  radios.forEach(radio => radio.addEventListener('click', (e) => {
     const selectedYear = e.target.getAttribute('class').match(/[0-9]+/g);
     updateSVG(d3, dataset[selectedYear]);
   }));

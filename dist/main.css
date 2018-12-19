@@ -20,9 +20,9 @@ body {
 }
 
 .year-controls {
-  margin: 16px 0 0 112px;
+  margin: 16px 0 0 88px;
 }
 
-.button {
-  margin: 0 8px;
+.radio {
+  margin: 0 24px 0 8px;
 }

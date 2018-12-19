@@ -1,4 +1,12 @@
 <div class="year-controls">
-  each button in controls
-    <button class="#{button.class}">#{button.text}</button>
+  each checkbox in controls
+    <label for="#{checkbox.id}">#{checkbox.text}</label>
+    input(
+      id = checkbox.id
+      class = checkbox.class
+      type = "radio"
+      value = checkbox.text
+      checked = (checkbox.text === 2016 ? "checked" : undefined)
+      name = "year"
+    )
 </div>
