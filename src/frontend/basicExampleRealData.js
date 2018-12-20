@@ -4,7 +4,7 @@ const displaySVG = (d3, dataset, svgSize) => {
   const svg = d3.select('#viz')
     .append('svg')
     .attr('width', svgSize)
-    .attr('height', svgSize);
+    .attr('height', 130);
 
   svg.selectAll('rect')
     .data(dataset)
@@ -35,7 +35,6 @@ const basicExampleRealData = (d3) => {
     .attr('data-js');
 
   const parsedData = JSON.parse(dataStr);
-  console.log(parsedData);
 
   displayRawData(d3, parsedData);
   displaySVG(d3, parsedData, svgSize);

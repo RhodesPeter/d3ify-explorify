@@ -8,7 +8,7 @@ const formatVerifiedData = (data) => {
       label: 'Verified',
       count: verifiedTotal,
     }, {
-      label: 'NotVerified', // WHY CAN'T IT HAVE A SPACE???
+      label: 'Not Verified',
       count: nonVerifiedTotal,
     },
   ]);

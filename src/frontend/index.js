@@ -3,6 +3,7 @@ import basicExample from './basicExample';
 import basicExampleRealData from './basicExampleRealData';
 import basicPie from './basicPie';
 import interactivePie from './interactivePie';
+import engagedUsers from './engagedUsers';
 
 const { pathname } = window.location;
 
@@ -20,4 +21,8 @@ if (pathname === '/basic-pie') {
 
 if (pathname === '/interactive-pie') {
   interactivePie(d3);
+}
+
+if (pathname === '/engaged-users') {
+  engagedUsers(d3);
 }

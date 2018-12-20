@@ -5,7 +5,7 @@ const formatVerifiedData = (data) => {
     {
       label: 2016,
       count: dataArray.filter(date => date.getFullYear() === 2016).length,
-      colour: '#23305E',
+      colour: '#FFD700',
     }, {
       label: 2017,
       count: dataArray.filter(date => date.getFullYear() === 2017).length,

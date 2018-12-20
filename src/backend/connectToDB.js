@@ -8,15 +8,15 @@ const databaseDetails = {
   database: 'Explorify',
 };
 
-const connectToDB = (databaseQuery, cb) => {
+const connectToDB = databaseQuery => new Promise((resolve, reject) => {
   const connection = mysql.createConnection(databaseDetails);
 
   connection.connect();
   connection.query(databaseQuery, (err, data) => {
-    if (err) throw err;
-    return cb(data);
+    if (err) reject(err);
+    resolve(data);
   });
   connection.end();
-};
+});
 
 module.exports = connectToDB;

@@ -13,7 +13,7 @@ const basicExample = (d3) => {
   const svg = d3.select('#viz')
     .append('svg')
     .attr('width', 400)
-    .attr('height', 400);
+    .attr('height', 250);
 
   svg.selectAll('rect')
     .data(dataset)

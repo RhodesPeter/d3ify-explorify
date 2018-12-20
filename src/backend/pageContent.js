@@ -5,7 +5,8 @@ const pageContent = {
       { link: '/basic-example', text: 'basic example' },
       { link: '/basic-example-real-data', text: 'basic example real data' },
       { link: '/basic-pie', text: 'basic pie chart' },
-      { link: '/interactive-pie', text: 'interactive-pie chart' },
+      { link: '/interactive-pie', text: 'interactive pie chart' },
+      { link: '/engaged-users', text: 'engaged users' },
     ],
   },
   basicExample: {
@@ -25,6 +26,15 @@ const pageContent = {
       { text: 2016, class: 'radio radio--2016', id: 'radio--2016' },
       { text: 2017, class: 'radio radio--2017', id: 'radio--2017' },
       { text: 2018, class: 'radio radio--2018', id: 'radio--2018' },
+    ],
+    data: null,
+  },
+  engagedUsers: {
+    title: 'Number of users viewing an activity within 2 weeks of signup',
+    controls: [
+      { text: 'October', class: 'radio radio--2016', id: 'radio--2016' },
+      { text: 'November', class: 'radio radio--2017', id: 'radio--2017' },
+      { text: 'December', class: 'radio radio--2018', id: 'radio--2018' },
     ],
     data: null,
   },

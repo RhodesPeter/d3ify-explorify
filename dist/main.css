@@ -26,3 +26,11 @@ body {
 .radio {
   margin: 0 24px 0 8px;
 }
+
+svg {
+  overflow: visible;
+}
+
+.js-data {
+  margin-top: 40px;
+}

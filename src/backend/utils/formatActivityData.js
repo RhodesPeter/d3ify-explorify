@@ -6,46 +6,46 @@ const formatActivityData = (data) => {
   return JSON.stringify({
     2016: [
       {
-        country: 'england',
+        country: 'England',
         count: sixteen.filter(activity => activity.country === 'England').length,
       }, {
-        country: 'scotland',
+        country: 'Scotland',
         count: sixteen.filter(activity => activity.country === 'Scotland').length,
       }, {
-        country: 'wales',
+        country: 'Wales',
         count: sixteen.filter(activity => activity.country === 'Wales').length,
       }, {
-        country: 'ni',
+        country: 'Northern Ireland',
         count: sixteen.filter(activity => activity.country === 'Northern Ireland').length,
       },
     ],
     2017: [
       {
-        country: 'england',
+        country: 'England',
         count: seventeen.filter(activity => activity.country === 'England').length,
       }, {
-        country: 'scotland',
+        country: 'Scotland',
         count: seventeen.filter(activity => activity.country === 'Scotland').length,
       }, {
-        country: 'wales',
+        country: 'Wales',
         count: seventeen.filter(activity => activity.country === 'Wales').length,
       }, {
-        country: 'ni',
+        country: 'Northern Ireland',
         count: seventeen.filter(activity => activity.country === 'Northern Ireland').length,
       },
     ],
     2018: [
       {
-        country: 'england',
+        country: 'England',
         count: eighteen.filter(activity => activity.country === 'England').length,
       }, {
-        country: 'scotland',
+        country: 'Scotland',
         count: eighteen.filter(activity => activity.country === 'Scotland').length,
       }, {
-        country: 'wales',
+        country: 'Wales',
         count: eighteen.filter(activity => activity.country === 'Wales').length,
       }, {
-        country: 'ni',
+        country: 'Northern Ireland',
         count: eighteen.filter(activity => activity.country === 'Northern Ireland').length,
       },
     ],

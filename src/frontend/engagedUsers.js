@@ -1,10 +1,9 @@
 import displayRawData from './displayRawData';
 
 const colours = {
-  England: '#F76C6C',
-  Scotland: '#A8D0E6',
-  Wales: '#23305E',
-  'Northern Ireland': '#FFD700',
+  October: '#F76C6C',
+  November: '#A8D0E6',
+  December: '#FFD700',
 };
 
 const displaySVG = (d3, dataset) => {
@@ -23,7 +22,7 @@ const displaySVG = (d3, dataset) => {
     .outerRadius(radius);
 
   const pie = d3.pie()
-    .value(d => d.count)
+    .value(d => d.data[0].percentage)
     .sort(null);
 
   function arcTween(a) {
@@ -38,14 +37,14 @@ const displaySVG = (d3, dataset) => {
     .append('g')
     .append('path')
     .attr('d', arc)
-    .attr('fill', d => colours[d.data.country])
+    .attr('fill', d => colours[d.data.month])
     .transition()
     .duration(500)
     .attrTween('d', arcTween);
 
   svg.selectAll('g')
     .append('text')
-    .text(d => d.data.country)
+    .text(d => d.data.month)
     .style('fill', '#000')
     .attr('transform', d => `translate(260, ${-50 + (d.index * 40)})`);
 
@@ -53,7 +52,7 @@ const displaySVG = (d3, dataset) => {
     .append('rect')
     .attr('width', 20)
     .attr('height', 20)
-    .attr('fill', d => colours[d.data.country])
+    .attr('fill', d => colours[d.data.month])
     .attr('transform', d => `translate(230, ${-65 + (d.index * 40)})`);
 };
 
@@ -67,7 +66,7 @@ const updateSVG = (d3, newDataset) => {
     .outerRadius(radius);
 
   const pie = d3.pie()
-    .value(d => d.count)
+    .value(d => d.percentage)
     .sort(null);
 
   function arcTween(a) {
@@ -79,7 +78,7 @@ const updateSVG = (d3, newDataset) => {
   d3.selectAll('path')
     .data(pie(newDataset))
     .attr('d', arc)
-    .attr('fill', d => colours[d.data.country])
+    .attr('fill', d => colours[d.data.month])
     .transition()
     .duration(500)
     .attrTween('d', arcTween);
@@ -93,20 +92,20 @@ const attachListenersToButtons = (d3, dataset) => {
   }));
 };
 
-const interactivePie = (d3) => {
+const engagedUsers = (d3) => {
   const dataStr = d3
     .select('#viz')
     .attr('data-js');
 
-  console.log(dataStr);
   const dataset = JSON.parse(dataStr);
+  console.log(dataset);
 
   attachListenersToButtons(d3, dataset);
   displayRawData(d3, dataset);
 
   // Default year is currently 2016
-  displaySVG(d3, dataset[2016]);
+  displaySVG(d3, dataset);
 };
 
 
-export default interactivePie;
+export default engagedUsers;
