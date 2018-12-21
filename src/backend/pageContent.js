@@ -30,12 +30,7 @@ const pageContent = {
     data: null,
   },
   engagedUsers: {
-    title: 'Number of users viewing an activity within 2 weeks of signup',
-    controls: [
-      { text: 'October', class: 'radio radio--2016', id: 'radio--2016' },
-      { text: 'November', class: 'radio radio--2017', id: 'radio--2017' },
-      { text: 'December', class: 'radio radio--2018', id: 'radio--2018' },
-    ],
+    title: 'Percentage of users viewing an activity within 2 weeks of signup',
     data: null,
   },
 };

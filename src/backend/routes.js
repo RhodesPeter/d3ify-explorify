@@ -44,7 +44,7 @@ const routes = (app) => {
       });
   });
 
-  const engagedQuery = date => `
+  const engagedQuery = (to, from) => `
     SELECT
     COUNT(DISTINCT u.id) AS total_registered,
     SUM(al.timestamp IS NOT NULL AND DATEDIFF(FROM_UNIXTIME(al.timestamp), u.registration_completed) <= 14) AS viewed_activity,
@@ -56,7 +56,7 @@ const routes = (app) => {
         u.test_user = 0
     AND u.registration_completed IS NOT NULL
     AND (SELECT SUM(teacher_role) FROM role INNER JOIN user_roles ON role_id = role.id WHERE user_details_id = ud.id) >= 1
-    AND u.registration_completed >= ${date};
+    AND u.registration_completed BETWEEN '${to}' AND '${from}';
   `;
 
   app.get('/engaged-users', (req, res) => {
@@ -66,13 +66,13 @@ const routes = (app) => {
       December: null,
     };
 
-    connectToDB(engagedQuery('2018-10-01'))
+    connectToDB(engagedQuery('2018-10-01', '2018-10-31'))
       .then((dataFromDB) => {
         data.October = dataFromDB;
-        return connectToDB(engagedQuery('2018-11-01'));
+        return connectToDB(engagedQuery('2018-11-01', '2018-11-30'));
       }).then((dataFromDB) => {
         data.November = dataFromDB;
-        return connectToDB(engagedQuery('2018-12-01'));
+        return connectToDB(engagedQuery('2018-11-01', '2019-01-31'));
       }).then((dataFromDB) => {
         data.December = dataFromDB;
         pageContent.engagedUsers.data = formatEngagedUserData(data);

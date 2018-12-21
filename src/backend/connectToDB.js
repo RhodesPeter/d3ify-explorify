@@ -5,7 +5,7 @@ const databaseDetails = {
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'Explorify',
+  database: 'explorify-2',
 };
 
 const connectToDB = databaseQuery => new Promise((resolve, reject) => {
